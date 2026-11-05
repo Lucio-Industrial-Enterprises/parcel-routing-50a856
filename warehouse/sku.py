@@ -2,7 +2,7 @@
 
 
 def normalize_sku(value: str) -> str:
-    """Return a canonical SKU suitable for labels and lookup."""
+    """Return an uppercase, whitespace-trimmed SKU for labels and lookup."""
     if not value or not value.strip():
         raise ValueError("SKU must not be blank")
-    return value.strip().lower()
+    return value.strip().upper()
